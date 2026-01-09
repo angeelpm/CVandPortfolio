@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Ángel Pinardo Morollón</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            font-size: 11pt;
+        }
+        
+        .cv-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15mm 20mm;
+            background: white;
+        }
+        
+        /* Header */
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid #7c3aed;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .cv-name {
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+        
+        .cv-title {
+            font-size: 14pt;
+            color: #7c3aed;
+            font-weight: 500;
+        }
+        
+        .cv-contact {
+            text-align: right;
+            font-size: 10pt;
+        }
+        
+        .cv-contact a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .cv-contact p {
+            margin: 3px 0;
+        }
+        
+        .cv-contact .icon {
+            display: inline-block;
+            width: 16px;
+            margin-right: 5px;
+        }
+        
+        /* Sections */
+        .cv-section {
+            margin-bottom: 18px;
+        }
+        
+        .cv-section-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #7c3aed;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+        }
+        
+        /* Profile */
+        .cv-profile {
+            text-align: justify;
+            color: #555;
+        }
+        
+        /* Experience & Education Items */
+        .cv-item {
+            margin-bottom: 12px;
+        }
+        
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        
+        .cv-item-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        
+        .cv-item-date {
+            font-size: 10pt;
+            color: #7c3aed;
+            font-weight: 500;
+        }
+        
+        .cv-item-subtitle {
+            font-size: 10pt;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .cv-item-description {
+            font-size: 10pt;
+            color: #555;
+        }
+        
+        /* Skills */
+        .cv-skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .cv-skill-category h4 {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+        
+        .cv-skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .cv-skill-tag {
+            background: #f3f0ff;
+            color: #7c3aed;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 9pt;
+            font-weight: 500;
+        }
+        
+        /* Projects */
+        .cv-project {
+            margin-bottom: 10px;
+        }
+        
+        .cv-project-title {
+            font-weight: 600;
+            color: #1a1a2e;
+            font-size: 10pt;
+        }
+        
+        .cv-project-tech {
+            font-size: 9pt;
+            color: #7c3aed;
+        }
+        
+        .cv-project-desc {
+            font-size: 9pt;
+            color: #555;
+        }
+        
+        /* Languages */
+        .cv-languages {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .cv-language {
+            font-size: 10pt;
+        }
+        
+        .cv-language strong {
+            color: #1a1a2e;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .cv-container {
+                padding: 10mm 15mm;
+            }
+            
+            .cv-skill-tag {
+                background: #f3f0ff !important;
+            }
+        }
+        
+        @page {
+            margin: 0;
+            size: A4;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <header class="cv-header">
+            <div class="cv-header-left">
+                <h1 class="cv-name">Ángel Pinardo Morollón</h1>
+                <p class="cv-title">Ingeniero Informático</p>
+            </div>
+            
+        </header>
+        
+        <!-- Profile -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Perfil Profesional</h2>
+            <p class="cv-profile">
+                Ingeniero informático con sólida formación técnica y gran curiosidad por el mundo de la ciberseguridad 
+                y el desarrollo de software. Especializado en programación de bajo nivel, sistemas operativos y 
+                tecnologías web. Siempre en búsqueda de nuevos retos que permitan crecimiento profesional y 
+                aportar valor a través de soluciones eficientes y seguras.
+            </p>
+        </section>
+        
+        <!-- Education -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Formación Académica</h2>
+            
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span class="cv-item-title">Grado en Ingeniería Informática</span>
+                    <span class="cv-item-date">2022 - Actualidad</span>
+                </div>
+                <p class="cv-item-subtitle">Escuela Superior de Informática (ESI)</p>
+                <p class="cv-item-description">
+                    Formación integral en fundamentos de computación, programación, redes, bases de datos 
+                    y desarrollo de software. Especialización en tecnologías de la información.
+                </p>
+            </div>
+            
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span class="cv-item-title">Bachiller Científico-Tecnológico</span>
+                    <span class="cv-item-date">2020 - 2022</span>
+                </div>
+                <p class="cv-item-subtitle">IES Torreón del Alcázar</p>
+                <p class="cv-item-description">
+                    Base sólida en matemáticas, física y tecnología.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Certifications -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Certificaciones y Cursos</h2>
+            
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span class="cv-item-title">Curso de Hacking Ético y Ciberseguridad</span>
+                    <span class="cv-item-date">2024</span>
+                </div>
+                <p class="cv-item-subtitle">El Pingüino de Mario</p>
+            </div>
+        </section>
+        
+        <!-- Skills -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Habilidades Técnicas</h2>
+            
+            <div class="cv-skills-grid">
+                <div class="cv-skill-category">
+                    <h4>Lenguajes de Programación</h4>
+                    <div class="cv-skill-list">
+                        <span class="cv-skill-tag">C</span>
+                        <span class="cv-skill-tag">C++</span>
+                        <span class="cv-skill-tag">Java</span>
+                        <span class="cv-skill-tag">Python</span>
+                        <span class="cv-skill-tag">JavaScript</span>
+                        <span class="cv-skill-tag">Kotlin</span>
+                    </div>
+                </div>
+                
+                <div class="cv-skill-category">
+                    <h4>Tecnologías Web</h4>
+                    <div class="cv-skill-list">
+                        <span class="cv-skill-tag">HTML5</span>
+                        <span class="cv-skill-tag">CSS3</span>
+                        <span class="cv-skill-tag">WordPress</span>
+                        <span class="cv-skill-tag">Spring Boot</span>
+                    </div>
+                </div>
+                
+                <div class="cv-skill-category">
+                    <h4>Herramientas y Sistemas</h4>
+                    <div class="cv-skill-list">
+                        <span class="cv-skill-tag">Git</span>
+                        <span class="cv-skill-tag">Linux</span>
+                        <span class="cv-skill-tag">Kali Linux</span>
+                        <span class="cv-skill-tag">Docker</span>
+                        <span class="cv-skill-tag">MySQL</span>
+                    </div>
+                </div>
+                
+                <div class="cv-skill-category">
+                    <h4>Soft Skills</h4>
+                    <div class="cv-skill-list">
+                        <span class="cv-skill-tag">Trabajo en equipo</span>
+                        <span class="cv-skill-tag">Comunicación</span>
+                        <span class="cv-skill-tag">Resolución de problemas</span>
+                        <span class="cv-skill-tag">Adaptabilidad</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Proyectos Destacados</h2>
+            
+            <div class="cv-project">
+                <span class="cv-project-title">Solución E-commerce</span>
+                <span class="cv-project-tech"> — WordPress, WooCommerce, PHP, MySQL</span>
+                <p class="cv-project-desc">Plataforma web de comercio electrónico completa para la Asociación Iker con catálogo, carrito y pasarela de pagos.</p>
+            </div>
+            
+            <div class="cv-project">
+                <span class="cv-project-title">Despliegue Spotify con ICE</span>
+                <span class="cv-project-tech"> — Python, ZeroC ICE, Docker</span>
+                <p class="cv-project-desc">Sistema distribuido tipo Spotify con arquitectura cliente-servidor y streaming de audio.</p>
+            </div>
+            
+            <div class="cv-project">
+                <span class="cv-project-title">Gestión de Eventos</span>
+                <span class="cv-project-tech"> — C, Spring Boot, MySQL</span>
+                <p class="cv-project-desc">Aplicación web para gestión integral de eventos con inscripciones y calendario interactivo.</p>
+            </div>
+            
+            <div class="cv-project">
+                <span class="cv-project-title">App Móvil de Rutas</span>
+                <span class="cv-project-tech"> — Kotlin, Google Maps API</span>
+                <p class="cv-project-desc">Aplicación móvil para rutas de senderismo con GPS y mapas interactivos.</p>
+            </div>
+            
+            <div class="cv-project">
+                <span class="cv-project-title">Juego Pokémon</span>
+                <span class="cv-project-tech"> — WPF, Visual Studio</span>
+                <p class="cv-project-desc">Videojuego con sistema de combates por turnos, captura y evoluciones.</p>
+            </div>
+            
+            <div class="cv-project">
+                <span class="cv-project-title">Juego RPG</span>
+                <span class="cv-project-tech"> — RPG Maker</span>
+                <p class="cv-project-desc">Videojuego de rol con narrativa inmersiva, misiones y combates estratégicos.</p>
+            </div>
+        </section>
+        
+        <!-- Languages -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Idiomas</h2>
+            <div class="cv-languages">
+                <p class="cv-language"><strong>Español:</strong> Nativo</p>
+                <p class="cv-language"><strong>Inglés:</strong> Intermedio (B1/B2)</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

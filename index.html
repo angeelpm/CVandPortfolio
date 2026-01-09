@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio profesional de Ángel - Desarrollador Web. Descubre mis proyectos, habilidades y trayectoria profesional.">
+    <meta name="keywords" content="portfolio, desarrollador web, programador, frontend, backend, proyectos">
+    <meta name="author" content="Ángel">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ángel | Portfolio Profesional">
+    <meta property="og:description" content="Desarrollador Web apasionado por crear experiencias digitales únicas">
+    <meta property="og:image" content="assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%237c3aed'/><circle cx='50' cy='50' r='25' fill='%23a855f7'/><circle cx='50' cy='50' r='12' fill='%23c084fc'/></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Ángel | Portfolio Profesional</title>
+</head>
+<body>
+    <!-- Stars Background -->
+    <div class="stars-container" id="stars"></div>
+    <div class="shooting-stars"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" width="32" height="32">
+                        <circle cx="20" cy="20" r="8" fill="url(#logoGradient)"/>
+                        <ellipse cx="20" cy="20" rx="18" ry="6" fill="none" stroke="url(#logoGradient)" stroke-width="1" opacity="0.5" transform="rotate(-20 20 20)"/>
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#c084fc"/>
+                                <stop offset="100%" stop-color="#7c3aed"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">Ángel</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre mí</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
+                <li><a href="#timeline" class="nav-link" data-i18n="nav.timeline">Trayectoria</a></li>
+                <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+            </ul>
+            <!-- Language Switcher -->
+            <button class="lang-switcher" id="langSwitcher" aria-label="Cambiar idioma">
+                <span class="lang-flag" id="langFlag">🇪🇸</span>
+                <span class="lang-code" id="langCode">ES</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Giant Planet (Jupiter) -->
+        <div class="giant-planet">
+            <div class="planet-body">
+                <div class="planet-bands"></div>
+                <div class="planet-atmosphere"></div>
+            </div>
+            <div class="planet-ring ring-1"></div>
+            <div class="planet-ring ring-2"></div>
+            <div class="planet-ring ring-3"></div>
+            <div class="planet-shadow"></div>
+            <!-- Luna de Júpiter -->
+            <div class="jupiter-moon"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting" data-i18n="hero.greeting">Hola, soy</p>
+                <h1 class="hero-title">
+                    <span class="text-gradient">Ángel</span>
+                </h1>
+                <h2 class="hero-subtitle" data-i18n="hero.subtitle">Ingeniero informático</h2>
+                <p class="hero-description" data-i18n="hero.description">
+                    Apasionado por la tecnología, la ciberseguridad y el desarrollo de soluciones innovadoras.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span data-i18n="hero.viewPortfolio">Ver Portfolio</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="assets/cv-angel.pdf" class="btn btn-secondary" download>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                        </svg>
+                        <span data-i18n="hero.downloadCV">Descargar CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <span data-i18n="hero.scroll">Scroll</span>
+            <div class="scroll-arrow"></div>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <!-- Planetas decorativos -->
+        <div class="deco-planet deco-planet-1" data-speed="0.3"></div>
+        <div class="deco-planet deco-planet-2" data-speed="0.5"></div>
+        
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="about.tag">Conóceme</span>
+                <h2 class="section-title" data-i18n="about.title">Sobre Mí</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="profile-placeholder">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            <p data-i18n="about.photoPlaceholder">Tu foto aquí</p>
+                        </div>
+                    </div>
+                    <div class="floating-badge badge-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="floating-badge badge-3">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 data-i18n="about.headline">Ingeniero informático especializado en tecnologías de la información</h3>
+                    <p class="bio" data-i18n="about.bio">
+                        Soy un ingeniero informático con una sólida formación técnica y una gran curiosidad por el mundo de la ciberseguridad y el desarrollo de software. Me especializo en programación, sistemas operativos y tecnologías web. Siempre en búsqueda de nuevos retos que me permitan crecer profesionalmente y aportar valor a través de soluciones eficientes y seguras.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <svg class="detail-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span class="detail-text" data-i18n="about.location">España</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg class="detail-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                            <span class="detail-text" data-i18n="about.role">Ingeniero</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg class="detail-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span class="detail-text" data-i18n="about.status">Disponible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <!-- Planetas decorativos -->
+        <div class="deco-planet deco-planet-3" data-speed="0.4"></div>
+        <div class="deco-moon deco-moon-1" data-speed="0.6"></div>
+        
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="skills.tag">Competencias</span>
+                <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
+            </div>
+            <div class="skills-container">
+                <!-- Soft Skills -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                <line x1="15" y1="9" x2="15.01" y2="9"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="skills.softSkills">Soft Skills</h3>
+                    </div>
+                    <div class="skills-grid soft-skills">
+                        <div class="skill-card" data-aos="fade-up">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h4 data-i18n="skills.teamwork">Trabajo en equipo</h4>
+                            <p data-i18n="skills.teamworkDesc">Colaboración efectiva en entornos multidisciplinares</p>
+                        </div>
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h4 data-i18n="skills.communication">Comunicación</h4>
+                            <p data-i18n="skills.communicationDesc">Capacidad para transmitir ideas de forma clara</p>
+                        </div>
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                </svg>
+                            </div>
+                            <h4 data-i18n="skills.problemSolving">Resolución de problemas</h4>
+                            <p data-i18n="skills.problemSolvingDesc">Enfoque analítico ante desafíos complejos</p>
+                        </div>
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                            </div>
+                            <h4 data-i18n="skills.continuousLearning">Aprendizaje continuo</h4>
+                            <p data-i18n="skills.continuousLearningDesc">Curiosidad constante por nuevas tecnologías</p>
+                        </div>
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <h4 data-i18n="skills.timeManagement">Gestión del tiempo</h4>
+                            <p data-i18n="skills.timeManagementDesc">Organización y cumplimiento de plazos</p>
+                        </div>
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="skill-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="6"/>
+                                    <circle cx="12" cy="12" r="2"/>
+                                </svg>
+                            </div>
+                            <h4 data-i18n="skills.adaptability">Adaptabilidad</h4>
+                            <p data-i18n="skills.adaptabilityDesc">Flexibilidad ante cambios y nuevos retos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hard Skills -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3>Hard Skills</h3>
+                    </div>
+                    <div class="skills-grid hard-skills">
+                        <div class="skill-card tech-card" data-aos="fade-up">
+                            <div class="tech-icon html">
+                                <svg viewBox="0 0 128 128"><path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/></svg>
+                            </div>
+                            <h4>HTML5</h4>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card tech-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="tech-icon css">
+                                <svg viewBox="0 0 128 128"><path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543z"/><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16z"/><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114H64.001z"/><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018z"/><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881z"/><path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711zm-.047 27.994v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711z"/></svg>
+                            </div>
+                            <h4>CSS3</h4>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card tech-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="tech-icon js">
+                                <svg viewBox="0 0 128 128"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.184H1.408z"/><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.505 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/></svg>
+                            </div>
+                            <h4>JavaScript</h4>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card tech-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="tech-icon c-lang">
+                                <svg viewBox="0 0 128 128"><path fill="#659AD3" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"/><path fill="#03599C" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"/><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"/></svg>
+                            </div>
+                            <h4>C</h4>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card tech-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="tech-icon cpp">
+                                <svg viewBox="0 0 128 128"><path fill="#659AD3" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"/><path fill="#03599C" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"/><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"/><path fill="#fff" d="M82 64h-5v-5h-4v5h-5v4h5v5h4v-5h5zM102 64h-5v-5h-4v5h-5v4h5v5h4v-5h5z"/></svg>
+                            </div>
+                            <h4>C++</h4>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card tech-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="tech-icon java">
+                                <svg viewBox="0 0 128 128"><path fill="#0074BD" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"/><path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z"/><path fill="#0074BD" d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z"/><path fill="#EA2D2E" d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z"/><path fill="#0074BD" d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z"/></svg>
+                            </div>
+                            <h4>Java</h4>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card tech-card" data-aos="fade-up" data-aos-delay="600">
+                            <div class="tech-icon python">
+                                <svg viewBox="0 0 128 128"><linearGradient id="python-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/></linearGradient><linearGradient id="python-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient><path fill="url(#python-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"/><path fill="url(#python-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"/></svg>
+                            </div>
+                            <h4>Python</h4>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card tech-card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="tech-icon git">
+                                <svg viewBox="0 0 128 128"><path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"/></svg>
+                            </div>
+                            <h4>Git</h4>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card tech-card" data-aos="fade-up" data-aos-delay="800">
+                            <div class="tech-icon linux">
+                                <svg viewBox="0 0 128 128"><path fill="#333" d="M64.638 125.177c-5.293.058-10.399-3.123-10.399-3.123-.074-.05-.147-.097-.222-.146-1.076-.689-2.124-1.418-3.141-2.187-7.371-4.87-16.168-8.559-25.127-11.158-6.252-1.775-11.334-3.945-14.889-7.728-3.551-3.782-5.447-9.099-5.447-16.344 0-10.141 2.229-18.594 5.951-25.715 3.699-7.078 8.858-12.793 14.43-17.271-.227-1.303-.464-2.702-.606-4.159-.218-2.23-.28-4.545.058-6.828.507-3.428 1.813-6.794 4.56-9.373 1.485-1.393 3.299-2.474 5.296-3.068 1.724-.512 3.562-.689 5.401-.547 4.237.329 8.119 2.071 11.48 4.53 3.362 2.461 6.24 5.612 8.695 9.011.106.146.21.293.314.439 2.451-.306 4.938-.497 7.459-.556 2.522.059 5.009.25 7.46.556.104-.146.208-.293.313-.439 2.456-3.399 5.334-6.55 8.697-9.011 3.361-2.459 7.242-4.201 11.479-4.53 1.839-.142 3.678.035 5.401.547 1.998.594 3.812 1.675 5.297 3.068 2.746 2.579 4.052 5.945 4.559 9.373.338 2.283.276 4.598.059 6.828-.143 1.457-.38 2.856-.607 4.159 5.572 4.478 10.731 10.193 14.43 17.271 3.722 7.121 5.952 15.574 5.952 25.715 0 7.245-1.897 12.562-5.447 16.344-3.555 3.783-8.638 5.953-14.889 7.728-8.96 2.599-17.757 6.288-25.127 11.158-1.018.769-2.066 1.498-3.142 2.187-.074.049-.147.096-.221.146 0 0-5.106 3.181-10.399 3.123z"/><path fill="#F5BA42" d="M99.554 57.109c.012-.1.026-.201.037-.302.176-1.624.137-3.236-.062-4.591-.243-1.649-.735-2.98-1.399-3.604-.368-.347-.762-.489-1.209-.449-.588.052-1.261.394-1.992.989-.732.594-1.522 1.437-2.355 2.482-.551.691-1.117 1.469-1.695 2.318 2.623 1.046 5.118 2.184 7.476 3.388.42-.058.827-.129 1.199-.231z"/><path fill="#FCD600" d="M92.968 53.933c-2.266-2.926-4.722-4.632-7.045-4.423-2.393.214-4.309 2.335-5.748 5.491 4.086.778 7.977 1.835 11.641 3.112.413-.649.812-1.262 1.207-1.814.354-.444.68-.846.992-1.216.325-.378.637-.757.953-1.15z"/><path fill="#F5BA42" d="M29.489 57.109a12.792 12.792 0 01-.037-.302c-.177-1.624-.138-3.236.062-4.591.242-1.649.735-2.98 1.399-3.604.367-.347.762-.489 1.209-.449.588.052 1.261.394 1.991.989.733.594 1.523 1.437 2.355 2.482.551.691 1.117 1.469 1.696 2.318a66.714 66.714 0 00-7.475 3.388 6.966 6.966 0 01-1.2-.231z"/><path fill="#FCD600" d="M36.076 53.933c2.265-2.926 4.722-4.632 7.044-4.423 2.393.214 4.309 2.335 5.749 5.491a63.387 63.387 0 00-11.641 3.112 43.036 43.036 0 00-1.207-1.814 27.114 27.114 0 00-.992-1.216 24.8 24.8 0 00-.953-1.15z"/><path fill="#333" d="M65.521 110.167c8.998-.14 17.385-2.072 24.957-5.166 7.594-3.102 14.353-7.379 20.129-12.353 1.046 6.276-.633 10.99-4.195 14.77-3.556 3.782-9.095 6.634-15.896 8.563-8.99 2.608-18.165 6.484-25.695 11.465-.072.048-.143.095-.215.142-.075-.047-.146-.094-.219-.143-7.529-4.98-16.703-8.856-25.693-11.464-6.8-1.929-12.34-4.781-15.896-8.563-3.561-3.78-5.24-8.494-4.194-14.77 5.775 4.974 12.534 9.251 20.128 12.353 7.573 3.094 15.959 5.026 24.958 5.166h1.831z"/><path fill="#FFF" d="M44.283 74.986c-.229 3.636 1.397 6.865 4.358 8.965 2.96 2.099 7.058 2.934 11.328 1.854l.016.006c-3.018-2.628-5.358-6.088-6.824-9.84-.775-1.982-1.34-4.063-1.661-6.178-4.538.629-7.034 2.608-7.217 5.193z"/><path fill="#E8E8E7" d="M78.889 75.983c-1.466 3.752-3.807 7.212-6.824 9.84l.015-.006c4.271 1.08 8.368.245 11.329-1.854s4.587-5.329 4.357-8.965c-.183-2.585-2.679-4.564-7.216-5.193a34.243 34.243 0 01-1.661 6.178z"/><path fill="#E8E8E7" d="M48.641 83.951c4.197 2.974 10.117 4.208 16.295 1.811-.203-.149-.404-.302-.603-.459-4.629-3.647-7.937-8.833-9.438-14.355-7.217.748-10.515 4.144-10.612 7.518 1.223 2.135 2.761 4.004 4.358 5.485z"/><path fill="#FFF" d="M64.936 85.762c6.178 2.397 12.099 1.163 16.296-1.811 1.597-1.481 3.135-3.35 4.357-5.485-.097-3.374-3.396-6.77-10.612-7.518-1.5 5.522-4.809 10.708-9.438 14.355-.2.157-.401.31-.603.459z"/><path fill="#FCD600" d="M75.879 77.128c.865-2.218 1.498-4.587 1.844-7.042a57.77 57.77 0 00-12.786-1.468 57.77 57.77 0 00-12.787 1.468 31.468 31.468 0 001.844 7.042c1.391 3.568 3.537 6.839 6.431 9.371.165.145.331.285.5.422 1.26.952 2.601 1.639 3.973 1.639s2.714-.687 3.973-1.639c.169-.137.336-.277.501-.422 2.894-2.532 5.04-5.803 6.431-9.371.035-.09.056-.182.089-.273-.003.093-.01.183-.013.273z"/><path fill="#F5BA42" d="M75.805 76.855c-.832 2.137-1.922 4.108-3.254 5.811-1.349 1.723-2.954 3.182-4.778 4.24.099-.069.196-.14.292-.213 2.895-2.532 5.041-5.803 6.432-9.371.034-.09.056-.182.088-.273-.267.616-.516 1.237-.78 1.806z"/><path fill="#F0F0F0" d="M47.525 99.012c4.123 3.131 12.154 5.152 17.08 5.152l.332-.002c4.926 0 12.957-2.021 17.079-5.152 4.123-3.131 9.271-8.888 14.006-13.682 3.009-3.047 5.797-5.751 8.19-7.541 3.556-2.661 6.12-5.916 7.599-9.655 1.494-3.779 1.894-8.064 1.098-12.722l-.006-.033c-1.104.785-2.396 1.437-3.768 1.981-.168.066-.337.127-.506.189-1.09.397-2.229.74-3.386 1.042a43.65 43.65 0 01-1.8.42 50.97 50.97 0 01-4.08.716c-.688.093-1.38.172-2.068.239-3.045.295-6.063.354-8.857.208l-.193-.012c-.099 4.104-3.856 7.887-11.462 8.752l-.01.002c2.979 2.926 5.091 6.609 6.06 10.339.971 3.738.789 7.519-.745 10.667-1.524 3.129-4.406 5.529-8.732 6.509-4.325-.98-7.206-3.38-8.731-6.509-1.534-3.148-1.716-6.929-.746-10.667.97-3.73 3.082-7.413 6.061-10.339l-.01-.002c-7.606-.865-11.364-4.648-11.462-8.752l-.193.012c-2.794.146-5.813.087-8.857-.208a54.68 54.68 0 01-2.069-.239 51.39 51.39 0 01-4.079-.716c-.611-.121-1.211-.261-1.8-.42-1.158-.302-2.297-.645-3.387-1.042a18.25 18.25 0 01-.506-.189 14.06 14.06 0 01-3.768-1.981l-.006.033c-.796 4.658-.395 8.943 1.099 12.722 1.479 3.739 4.043 6.994 7.599 9.655 2.393 1.79 5.18 4.494 8.19 7.541 4.735 4.794 9.884 10.551 14.006 13.682z"/><path fill="#FFF" d="M45.127 67.416l.007-.028c-7.049.844-11.866 2.847-14.139 5.93-1.491 2.021-2.24 4.554-1.967 7.774.261 3.076 1.423 6.836 3.862 11.526.096-.076.189-.154.287-.229.188-.145.377-.289.568-.431 1.053-.785 2.169-1.54 3.32-2.271a48.906 48.906 0 016.14-3.325c3.058-1.376 6.327-2.471 9.656-3.178-4.099-3.984-6.878-9.467-7.734-15.768z"/><path fill="#E8E8E7" d="M80.075 83.184c3.329.707 6.598 1.802 9.656 3.178a48.906 48.906 0 016.14 3.325c1.151.731 2.267 1.486 3.32 2.271.191.142.38.286.568.431.098.075.191.153.287.229 2.439-4.69 3.601-8.45 3.862-11.526.273-3.22-.476-5.753-1.967-7.774-2.273-3.083-7.09-5.086-14.139-5.93l.007.028c-.856 6.301-3.635 11.784-7.734 15.768z"/><path fill="#F0F0F0" d="M96.667 91.051c-5.869 4.818-13.089 8.675-21.225 11.379.042.034.083.068.126.101 4.123 3.131 9.271 8.888 14.006 13.682.682.691 1.375 1.388 2.074 2.072.078.076.157.152.234.228a56.5 56.5 0 003.379 3.05 35.97 35.97 0 002.503 1.92c.073.05.145.098.218.146 0 0 5.106 3.181 10.399 3.123h.916c4.405-.049 8.651-2.14 11.416-5.053.126-.138.249-.276.37-.417 2.762-3.213 4.389-7.409 3.408-12.295-5.78-4.977-12.543-9.256-20.141-12.359a71.448 71.448 0 00-7.683-2.577z"/><path fill="#FFF" d="M65.521 110.167c7.147-.111 13.895-1.428 20.091-3.665.073-.026.144-.056.216-.083l-.385-.099c-4.627-1.164-8.785-3.125-12.173-5.759-.022-.018-.044-.035-.066-.052a30.983 30.983 0 01-6.766 3.621 30.94 30.94 0 01-6.766-3.621c-.022.017-.044.034-.066.052-3.388 2.634-7.546 4.595-12.173 5.759l-.385.099c.072.027.143.057.216.083 6.196 2.237 12.944 3.554 20.091 3.665h1.831-.665z"/><path fill="#E8E8E7" d="M32.375 91.051a71.448 71.448 0 00-7.684 2.577c-7.598 3.103-14.362 7.382-20.141 12.359-1.027 5.126.711 9.467 3.637 12.69l.14.152c2.799 2.904 7.034 4.966 11.411 4.923h.916c5.293.058 10.399-3.123 10.399-3.123.073-.048.145-.096.218-.146a35.97 35.97 0 002.503-1.92 56.5 56.5 0 003.379-3.05c.077-.076.156-.152.234-.228.699-.684 1.392-1.381 2.074-2.072 4.735-4.794 9.884-10.551 14.006-13.682.043-.032.084-.067.126-.101-8.136-2.704-15.356-6.561-21.218-11.379z"/></svg>
+                            </div>
+                            <h4>Linux</h4>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card tech-card" data-aos="fade-up" data-aos-delay="900">
+                            <div class="tech-icon kali">
+                                <svg viewBox="0 0 128 128"><path fill="#557C94" d="M64 0C28.654 0 0 28.654 0 64s28.654 64 64 64 64-28.654 64-64S99.346 0 64 0zm32.397 92.086l-21.553-7.963c-.247 3.728-2.428 6.746-5.644 8.058l-13.08 6.012c-.988.38-1.741.494-2.307.494-1.976 0-2.777-1.647-2.777-1.647l-7.104-16.893 7.727-.988 4.444 9.37 8.934-4.327c1.853-.741 2.058-2.594 2.058-3.087 0-.988-.576-2.347-2.305-2.841l-23.406-7.839c-3.334-1.235-5.02-4.327-4.527-7.592.37-2.347 1.976-4.327 4.444-5.191l15.263-4.944c.494-.123 1.235-.247 1.976-.247 1.606 0 3.087.618 4.198 1.853l17.486-7.345c-1.853-2.841-4.45-5.067-7.592-6.302l-26.123-8.828c-7.222-2.471-14.32-.247-18.647 5.314l-7.345-16.769 8.334-2.347 3.951 9.123L48.49 21.81c3.581-2.841 8.272-3.581 12.846-1.976L90.09 30.391c7.716 2.594 12.846 9.37 12.846 17.115v37.856c0 3.334-2.717 6.054-6.051 6.724h-.488z"/></svg>
+                            </div>
+                            <h4>Kali Linux</h4>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section timeline">
+        <!-- Planetas decorativos -->
+        <div class="deco-planet deco-planet-4" data-speed="0.35"></div>
+        <div class="deco-planet deco-planet-5" data-speed="0.55"></div>
+        
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="timeline.tag">Mi Viaje</span>
+                <h2 class="section-title" data-i18n="timeline.title">Trayectoria</h2>
+            </div>
+            <div class="timeline-container">
+                <!-- Education -->
+                <div class="timeline-category">
+                    <h3 class="timeline-category-title">
+                        <svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                        <span data-i18n="timeline.education">Formación Académica</span>
+                    </h3>
+                    <div class="timeline-items">
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date" data-i18n="timeline.edu1.date">2022 - Actualidad</span>
+                                <h4 data-i18n="timeline.edu1.title">Grado en Ingeniería Informática</h4>
+                                <p class="timeline-place" data-i18n="timeline.edu1.place">Escuela Superior de Informática (ESI)</p>
+                                <p class="timeline-description" data-i18n="timeline.edu1.description">Formación integral en fundamentos de computación, programación, redes, bases de datos y desarrollo de software. Especialización en tecnologías de la información con enfoque práctico en proyectos reales.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date" data-i18n="timeline.edu2.date">2020 - 2022</span>
+                                <h4 data-i18n="timeline.edu2.title">Bachiller Científico-Tecnológico</h4>
+                                <p class="timeline-place" data-i18n="timeline.edu2.place">IES Torreón del Alcázar</p>
+                                <p class="timeline-description" data-i18n="timeline.edu2.description">Bachillerato con orientación científico-tecnológica. Base sólida en matemáticas, física y tecnología que sentó las bases para mi carrera en ingeniería informática.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="timeline-category">
+                    <h3 class="timeline-category-title">
+                        <svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        <span data-i18n="timeline.certifications">Certificaciones y Cursos</span>
+                    </h3>
+                    <div class="timeline-items">
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2024</span>
+                                <h4 data-i18n="timeline.cert1.title">Curso de hacking ético y ciberseguridad </h4>
+                                <p class="timeline-place">YouTube: El Pingüino de Mario</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="timeline-category">
+                    <h3 class="timeline-category-title">
+                        <svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                        <span data-i18n="timeline.experience">Experiencia y Proyectos</span>
+                    </h3>
+                    <div class="timeline-items">
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2025</span>
+                                <h4 data-i18n="timeline.exp1.title">Solución Web de E-commerce</h4>
+                                <p class="timeline-place" data-i18n="timeline.exp1.place">Proyecto e-commerce</p>
+                                <p class="timeline-description" data-i18n="timeline.exp1.description">Solución completamente funcional de una web e-commerce para Asociación Iker</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2025</span>
+                                <h4 data-i18n="timeline.exp2.title">Videojuego RPG</h4>
+                                <p class="timeline-place" data-i18n="timeline.exp2.place">Proyecto multimedia</p>
+                                <p class="timeline-description" data-i18n="timeline.exp2.description">Desarrollo de juego RPG utilizando RPG maker como herramienta principal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio">
+        <!-- Planetas decorativos -->
+        <div class="deco-planet deco-planet-6" data-speed="0.45"></div>
+        <div class="deco-moon deco-moon-2" data-speed="0.7"></div>
+        
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="portfolio.tag">Mis Trabajos</span>
+                <h2 class="section-title" data-i18n="portfolio.title">Portfolio</h2>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Project 1: E-commerce -->
+                <article class="project-card" data-aos="zoom-in">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <circle cx="9" cy="21" r="1"/>
+                                <circle cx="20" cy="21" r="1"/>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver demo" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" title="Ver código" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-i18n="portfolio.project1.title">Solución E-commerce</h3>
+                        <p class="project-description" data-i18n="portfolio.project1.description">
+                            Plataforma web de comercio electrónico completa para la Asociación Iker. 
+                            Incluye catálogo de productos, carrito de compras, pasarela de pagos y panel de administración.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Wordpress</span>
+                            <span class="tech-tag">Woocommerce</span>
+                            <span class="tech-tag">php</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Spotify con ICE -->
+                <article class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polygon points="10 8 16 12 10 16 10 8"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver demo" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" title="Ver código" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-i18n="portfolio.project2.title">Despliegue Spotify con ICE</h3>
+                        <p class="project-description" data-i18n="portfolio.project2.description">
+                            Implementación y despliegue de un sistema distribuido tipo Spotify utilizando 
+                            ZeroC ICE como middleware. Arquitectura cliente-servidor con streaming de audio.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ZeroC ICE</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Gestión de Eventos -->
+                <article class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver demo" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" title="Ver código" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-i18n="portfolio.project3.title">Gestión de Eventos</h3>
+                        <p class="project-description" data-i18n="portfolio.project3.description">
+                            Aplicación web para la gestión integral de eventos. Permite crear, editar y 
+                            administrar eventos con sistema de inscripciones, notificaciones y calendario interactivo.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: App Móvil Rutas -->
+                <article class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver demo" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" title="Ver código" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-i18n="portfolio.project4.title">App Móvil de Rutas</h3>
+                        <p class="project-description" data-i18n="portfolio.project4.description">
+                            Aplicación móvil para explorar y seguir rutas de senderismo y turismo. 
+                            Integración con GPS, mapas interactivos y sistema de puntos de interés.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Visual Studio</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Google Maps API</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: Juego Pokémon -->
+                <article class="project-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="3"/>
+                                <line x1="2" y1="12" x2="9" y2="12"/>
+                                <line x1="15" y1="12" x2="22" y2="12"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver demo" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" title="Ver código" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-i18n="portfolio.project5.title">Juego Pokémon</h3>
+                        <p class="project-description" data-i18n="portfolio.project5.description">
+                            Videojuego inspirado en la saga Pokémon con sistema de combates por turnos, 
+                            captura de criaturas, evoluciones y exploración de mapas.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WPF</span>
+                            <span class="tech-tag">Visual Studio</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Juego RPG -->
+                <article class="project-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/>
+                                <path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                                <path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/>
+                                <path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/>
+                                <path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/>
+                                <path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/>
+                                <path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/>
+                                <path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver demo" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" title="Ver código" target="_blank" rel="noopener noreferrer">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-i18n="portfolio.project6.title">Juego RPG</h3>
+                        <p class="project-description" data-i18n="portfolio.project6.description">
+                            Videojuego de rol con narrativa inmersiva, sistema de misiones, 
+                            combates estratégicos y personalización de personajes. Desarrollado con RPG Maker.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">RPG Maker</span>
+                            <span class="tech-tag">Game Design</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <!-- Planetas decorativos -->
+        <div class="deco-planet deco-planet-7" data-speed="0.4"></div>
+        <div class="deco-planet deco-planet-8" data-speed="0.5"></div>
+        
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="contact.tag">Hablemos</span>
+                <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+                <p class="section-description" data-i18n="contact.description">
+                    ¿Tienes un proyecto en mente o simplemente quieres saludar? 
+                    Estoy a solo un mensaje de distancia.
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact.emailLabel">Email</h4>
+                            <a href="mailto:apinardo.morollon@gmail.com">apinardo.morollon@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact.locationLabel">Ubicación</h4>
+                            <p data-i18n="contact.locationValue">España</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/angeelpm" target="_blank" rel="noopener noreferrer">linkedin.com/in/angeelpm</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/angeelpm" target="_blank" rel="noopener noreferrer">github.com/angeelpm</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" data-i18n="contact.form.name">Nombre</label>
+                        <input type="text" id="name" name="name" required data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.form.email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" data-i18n="contact.form.subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" required data-i18n-placeholder="contact.form.subjectPlaceholder" placeholder="¿De qué quieres hablar?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="contact.form.message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Tu mensaje..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span data-i18n="contact.form.send">Enviar mensaje</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 40 40" width="28" height="28">
+                            <circle cx="20" cy="20" r="8" fill="url(#footerGradient)"/>
+                            <ellipse cx="20" cy="20" rx="18" ry="6" fill="none" stroke="url(#footerGradient)" stroke-width="1" opacity="0.5" transform="rotate(-20 20 20)"/>
+                            <defs>
+                                <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#c084fc"/>
+                                    <stop offset="100%" stop-color="#7c3aed"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Ángel</span>
+                </div>
+                <p class="footer-text" data-i18n="footer.text">
+                    Diseñado y desarrollado con pasión, soñando con las estrellas.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/angeelpm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/angeelpm" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:apinardo.morollon@gmail.com" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 Ángel. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
