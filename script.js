@@ -630,7 +630,7 @@ const translations = {
         // Hero
         'hero.greeting': 'Hola, soy',
         'hero.subtitle': 'Ingeniero informático',
-        'hero.description': 'Apasionado por la tecnología, la ciberseguridad y el desarrollo de soluciones innovadoras. Transformando ideas en código y desafíos en oportunidades.',
+        'hero.description': 'Apasionado por la tecnología, la ciberseguridad y el desarrollo de soluciones innovadoras.',
         'hero.viewPortfolio': 'Ver Portfolio',
         'hero.downloadCV': 'Descargar CV',
         'hero.scroll': 'Scroll',
@@ -733,7 +733,7 @@ const translations = {
         // Hero
         'hero.greeting': 'Hi, I\'m',
         'hero.subtitle': 'Computer Engineer',
-        'hero.description': 'Passionate about technology, cybersecurity, and developing innovative solutions. Turning ideas into code and challenges into opportunities.',
+        'hero.description': 'Passionate about technology, cybersecurity, and developing innovative solutions.',
         'hero.viewPortfolio': 'View Portfolio',
         'hero.downloadCV': 'Download CV',
         'hero.scroll': 'Scroll',
